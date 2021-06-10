@@ -1,6 +1,8 @@
 from django.db import models
 
-
+"""
+Model voor project en contact
+"""
 class Project(models.Model):
     title = models.CharField(max_length=100)
     short_description = models.TextField()

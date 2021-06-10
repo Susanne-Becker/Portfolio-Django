@@ -1,24 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+<!-- Over mij, 2 kolommen: 1 voor tekst en 1 voor afbeelding -->
 <h1>Over mij</h1>
 <div class="container" >
     <div class="row">
         <div class="col-md">
-            <p>Ik ben Susanne, 21 jaar en studeer Communicatie en Multimedia Design (CMD) 
-                op de Hogeschool van Amsterdam. Hiernaast heb ik via de Universiteit van 
-                Amsterdam minor programeren van Harvard gevolgd en behaald. Hierdoor heb ik al 
-                met de volgende programma’s gewerkt: HTML, CSS, Javascript, C, Python (waaronder 
-                Django) en een beetje Swift.
+            <p>Ik ben Susanne Becker, 21 jaar en woon in Blaricum. In 2017 heb ik mijn HAVO-diploma behaald 
+                en nu studeer Communication and Multimedia Design (CMD) aan de Hogeschool van Amsterdam. 
+                Het laatste semester heb ik een programmeer minor van Harvard gevolgd aan de Universiteit 
+                van Amsterdam. Wij kregen daarbij les van Harvard en de opdrachten kwamen ook vanuit hun, 
+                maar de UvA ondersteunde ons hierbij. Momenteel ben ik op zoek naar een afstudeer stage.
             </p>
             <p>
-                Ik ben leergierig, een doorzetter en een teamplayer. Als er iets moet gebeuren ga 
-                ik door tot het gewenste resultaat behaald is. Dit heeft geresulteerd in dat ik 
-                alle vakken altijd in 1x gehaald heb. Ik hou er verder van om creatief bezig te 
-                zijn, zoals tekenen.
+                In mijn vrije tijd probeer ik zoveel mogelijk te reizen, fotograferen 
+                en hou ik er van om creatief bezig te zijn. 
             </p>   
             <p>
-                Graag nodig ik je uit om een kijkje te nemen in mijn portfolio. Wil je meer over 
+                Graag nodig ik u uit om een kijkje te nemen in mijn portfolio. Wilt u meer over 
                 mij of mijn werkervaring weten, neem dan contact op via het formulier beneden of 
                 stuur een mail naar Susannevbecker@hotmail.com.
             </p>
@@ -28,6 +27,7 @@
         </div>
     </div>
 </div>
+<!-- project 'kaarten' -->
 <h1>Projects</h1>
 <div class="row">
 {% for project in projects %}
@@ -43,6 +43,7 @@
     </div>
     {% endfor %}
 </div>
+<!-- contact formulier -->
 <h1>Contact formulier</h1>
 <form role="form" action="" method="post">
     {% csrf_token %}

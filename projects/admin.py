@@ -6,4 +6,3 @@ Register your models here.
 """
 admin.site.register(Project)
 
-# Register your models here.
