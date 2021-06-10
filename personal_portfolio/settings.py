@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "!^_6%0so9$a@u-w22nc56xcp0^spoo4k^3q!j016o5hll+#c#o"
+SECRET_KEY = "t&wwl74en9olho9+zx=w(9o1+j4s2qy17qmt&c)o3y!cg(i6mk"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "projects",
+    'dbfiles',
 ]
 
 MIDDLEWARE = [
@@ -133,13 +134,12 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 
+# Optionally set DEFAULT_FILE_STORAGE
+DEFAULT_FILE_STORAGE = 'dbfiles.storage.DBStorage'
 
-#CONTACT_EMAIL = 'susannevbecker@hotmail.com'
-#ADMIN_EMAILS = ['admin@example.com', ]
+# Choose a root url for uploaded files
+MEDIA_URL = '/media/'
 
-# Twilio SendGrid
-#EMAIL_HOST = 'smtp.sendgrid.net'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-#EMAIL_HOST_USER = 'apikey'
-#EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+import django_on_heroku
+django_on_heroku.settings(locals())
+
