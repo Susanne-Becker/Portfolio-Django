@@ -2,10 +2,15 @@
 {% load static %}
 {% block page_content %}
 <!-- Project pagina met afbeelding, beschrijving, technologie en link -->
+<br>
 <h1>{{ project.title }}</h1>
+<br>
 <div class="row" >
     <div class="col-md-8">
         <img src="{% static project.image %}" alt="" width="100%">
+        <br>
+        <br>
+        <br>
     </div>
     <div class="col-md-4">
         <h5>Over het project:</h5>
@@ -13,11 +18,12 @@
         <br>
         <h5>Gebruikte technologie:</h5>
         <p>{{ project.technology }}</p>
-        
-        {% if project.link %}
-            <h5>Project link:</h5>
-            <a href="{{ project.link }}">Link naar project</a>
-        {% endif %}
+        <br>
+        <h5>Project link:</h5>
+        <a href="{{ project.link }}">Link naar project</a>
+        <br>
+        <br>
+        <br>
     </div>
 </div>
 {% endblock %}
