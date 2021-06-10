@@ -3,34 +3,34 @@
 {% block page_content %}
 <!-- Over mij, 2 kolommen: 1 voor tekst en 1 voor afbeelding -->
 <h1>Over mij</h1>
-<div class="container" >
+<div class="container">
     <div class="row">
         <div class="col-md">
-            <p>Ik ben Susanne Becker, 21 jaar en woon in Blaricum. In 2017 heb ik mijn HAVO-diploma behaald 
-                en nu studeer Communication and Multimedia Design (CMD) aan de Hogeschool van Amsterdam. 
-                Het laatste semester heb ik een programmeer minor van Harvard gevolgd aan de Universiteit 
-                van Amsterdam. Wij kregen daarbij les van Harvard en de opdrachten kwamen ook vanuit hun, 
+            <p>Ik ben Susanne Becker, 21 jaar en woon in Blaricum. In 2017 heb ik mijn HAVO-diploma behaald
+                en nu studeer Communication and Multimedia Design (CMD) aan de Hogeschool van Amsterdam.
+                Het laatste semester heb ik een programmeer minor van Harvard gevolgd aan de Universiteit
+                van Amsterdam. Wij kregen daarbij les van Harvard en de opdrachten kwamen ook vanuit hun,
                 maar de UvA ondersteunde ons hierbij. Momenteel ben ik op zoek naar een afstudeer stage.
             </p>
             <p>
-                In mijn vrije tijd probeer ik zoveel mogelijk te reizen, fotograferen 
-                en hou ik er van om creatief bezig te zijn. 
-            </p>   
+                In mijn vrije tijd probeer ik zoveel mogelijk te reizen, fotograferen
+                en hou ik er van om creatief bezig te zijn.
+            </p>
             <p>
-                Graag nodig ik u uit om een kijkje te nemen in mijn portfolio. Wilt u meer over 
-                mij of mijn werkervaring weten, neem dan contact op via het formulier beneden of 
+                Graag nodig ik u uit om een kijkje te nemen in mijn portfolio. Wilt u meer over
+                mij of mijn werkervaring weten, neem dan contact op via het formulier beneden of
                 stuur een mail naar Susannevbecker@hotmail.com.
             </p>
         </div>
         <div class="col-md-2">
-            <img src="static/img/personal.png" >
+            <img src="static/img/personal.png">
         </div>
     </div>
 </div>
 <!-- project 'kaarten' -->
 <h1>Projects</h1>
 <div class="row">
-{% for project in projects %}
+    {% for project in projects %}
     <div class="col-md-4">
         <div class="card mb-2">
             <img class="card-img-top" src="{% static project.image %}">
