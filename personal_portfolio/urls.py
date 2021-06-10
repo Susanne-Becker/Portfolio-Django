@@ -20,5 +20,5 @@ from dbfiles.urls import dbfiles_url
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("projects.urls")),
-    dbfiles_url(),
+    dbfiles_url()
 ]
