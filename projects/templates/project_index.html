@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Over mij</h1>
+<div class="container" >
+    <div class="row">
+        <div class="col-md">
+            <p>Ik ben Susanne, 21 jaar en studeer Communicatie en Multimedia Design (CMD) 
+                op de Hogeschool van Amsterdam. Hiernaast heb ik via de Universiteit van 
+                Amsterdam minor programeren van Harvard gevolgd en behaald. Hierdoor heb ik al 
+                met de volgende programma’s gewerkt: HTML, CSS, Javascript, C, Python (waaronder 
+                Django) en een beetje Swift.
+            </p>
+            <p>
+                Ik ben leergierig, een doorzetter en een teamplayer. Als er iets moet gebeuren ga 
+                ik door tot het gewenste resultaat behaald is. Dit heeft geresulteerd in dat ik 
+                alle vakken altijd in 1x gehaald heb. Ik hou er verder van om creatief bezig te 
+                zijn, zoals tekenen.
+            </p>   
+            <p>
+                Graag nodig ik je uit om een kijkje te nemen in mijn portfolio. Wil je meer over 
+                mij of mijn werkervaring weten, neem dan contact op via het formulier beneden of 
+                stuur een mail naar Susannevbecker@hotmail.com.
+            </p>
+        </div>
+        <div class="col-md-2">
+            <img src="static/img/personal.png" >
+        </div>
+    </div>
+</div>
+<h1>Projects</h1>
+<div class="row">
+{% for project in projects %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.short_description }}</p>
+                <a href="{% url 'project_detail' project.pk %}" class="btn btn-dark"> Lees meer</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<h1>Contact formulier</h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ contactform.as_p }}
+    <button class="btn btn-dark" type="submit">Submit</button>
+</form>
+
+{% endblock %}

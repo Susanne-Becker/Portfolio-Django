@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="static/css/style.css" rel="stylesheet">
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'project_index' %}">Portfolio Susanne Becker</a>
+    </div>
+  </nav>
+  <img id="header"
+    src="https://blog.copify.com/wp-content/uploads/2019/06/What-does-a-financial-copywriter-do-Copify-blog-3-1500x400.jpg">
+</header>
+
+<body>
+  <div class="container">
+    {% block page_content %}{% endblock %}
+  </div>
+</body>
+
+</html>
